@@ -8,6 +8,8 @@ services:
     container_name: alembic
     environment:
       - PYTHONPATH=${PYTHONPATH}:/root/src
+    volumes:
+      - ./:/root
     tty: true
   postgres:
     image: postgres:13
