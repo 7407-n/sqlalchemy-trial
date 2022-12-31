@@ -9,6 +9,7 @@ services:
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
+    restart: always
   pgadmin:
     image: dpage/pgadmin4:6.11
     container_name: pgadmin4_v6
@@ -17,5 +18,8 @@ services:
     environment:
       - PGADMIN_DEFAULT_EMAIL=example@example.com
       - PGADMIN_DEFAULT_PASSWORD=password
+#    volumes:
+#      - ./docker/pgadmin4:/var/lib/pgadmin
     depends_on:
       - postgres
+    restart: always
