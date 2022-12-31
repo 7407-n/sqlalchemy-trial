@@ -18,8 +18,8 @@ services:
     environment:
       - PGADMIN_DEFAULT_EMAIL=example@example.com
       - PGADMIN_DEFAULT_PASSWORD=password
-#    volumes:
-#      - ./docker/pgadmin4:/var/lib/pgadmin
+    volumes:
+      - D:\sqlalchemy-trial\volume\pgadmin4:/var/lib/pgadmin
     depends_on:
       - postgres
     restart: always
