@@ -6,6 +6,8 @@ services:
       context: .
       dockerfile: docker/alembic/Dockerfile
     container_name: alembic
+    environment:
+      - PYTHONPATH=${PYTHONPATH}:/root/src
     tty: true
   postgres:
     image: postgres:13
