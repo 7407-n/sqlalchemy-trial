@@ -11,6 +11,8 @@ services:
     volumes:
       - ./:/root
     tty: true
+    depends_on:
+      - postgres
   postgres:
     image: postgres:13
     container_name: postgres_v13
