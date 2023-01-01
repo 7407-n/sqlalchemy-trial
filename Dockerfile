@@ -1,6 +1,6 @@
 FROM python:3.9-slim
 
-COPY docker/alembic/requirements.txt /root
+COPY requirements.txt /root
 
 WORKDIR /root
 

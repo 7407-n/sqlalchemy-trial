@@ -4,7 +4,7 @@ services:
   alembic:
     build:
       context: .
-      dockerfile: docker/alembic/Dockerfile
+      dockerfile: Dockerfile
     container_name: alembic
     environment:
       - PYTHONPATH=${PYTHONPATH}:/root/src
