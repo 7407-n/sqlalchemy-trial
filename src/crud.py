@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
 
-from . import models
+import models
 
 def get_account(db: Session, account_id: int):
     return db.query(models.Account).filter(models.Account.id == account_id).first()
