@@ -1,18 +1,6 @@
 version: "3.8"
 
 services:
-  app:
-    build:
-      context: .
-      dockerfile: docker/app/Dockerfile
-    container_name: app
-    environment:
-      - PYTHONPATH=${PYTHONPATH}:/root/src
-    volumes:
-      - ./:/root
-    tty: true
-    depends_on:
-      - alembic
   alembic:
     build:
       context: .
