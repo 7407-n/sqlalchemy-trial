@@ -1,7 +1,7 @@
 from sqlalchemy.orm import Session
 
 import crud, models
-import SessionLocal, engine
+from database import SessionLocal, engine
 
 models.Base.metadata.create_all(bind=engine)
 
