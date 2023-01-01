@@ -1,5 +1,3 @@
-from sqlalchemy.orm import Session
-
 import crud, models
 from database import SessionLocal, engine
 
